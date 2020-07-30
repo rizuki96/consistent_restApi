@@ -29,7 +29,9 @@ return [
     |
     */
   'map'               => [
-    ApiCode::INVALID_CREDENTIALS => 'api.invalid_credentials'
+    ApiCode::INVALID_CREDENTIALS => 'api.invalid_credentials',
+    ApiCode::SOMETHING_WENT_WRONG => 'api.something_went_wrong',
+    ApiCode::VALIDATION_ERROR => 'api.validation_error'
   ],
 
 ];
