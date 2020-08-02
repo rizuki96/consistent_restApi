@@ -37,6 +37,11 @@ class Controller extends BaseController
         return $this->respondWithError($api_code, 401);
     }
 
+    public function respondUnAuthorizedRequest($api_code)
+    {
+        return $this->respondWithError($api_code, 401);
+    }
+
     public function respondNotFound($api_code)
     {
         return $this->respondWithError($api_code, 404);

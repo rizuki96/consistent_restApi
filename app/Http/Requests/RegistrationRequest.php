@@ -35,9 +35,6 @@ class RegistrationRequest extends FormRequest
 
     public function getAttributes()
     {
-        return array_merge(
-            $this->only(['name', 'email']),
-            ['password' => Hash::make($this->get('password'))]
-        );
+        return $this->validated();
     }
 }

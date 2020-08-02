@@ -9,7 +9,7 @@ class RegistrationController extends Controller
 {
     public function register(RegistrationRequest $request)
     {
-        User::create($request->getAttributes());
+        User::create($request->getAttributes())->sendEmailVerificationNotification();
 
         return $this->respondWithMessage('User successfully created');
     }
