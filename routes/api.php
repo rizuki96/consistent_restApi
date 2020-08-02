@@ -28,4 +28,7 @@ Route::middleware(['api'])->group(function ($router) {
 
     Route::get('email/verify/{id}', 'VerificationController@verify')->name('verification.verify');
     Route::get('email/resend', 'VerificationController@resend')->name('verification.resend');
+
+    Route::post('password/email', 'ForgotPasswordController@forgot');
+    Route::post('password/reset', 'ForgotPasswordController@reset');
 });
