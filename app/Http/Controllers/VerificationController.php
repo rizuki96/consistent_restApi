@@ -29,7 +29,7 @@ class VerificationController extends Controller
         $user = User::findOrFail($user_id);
 
         if (!$user->hasVerifiedEmail()) {
-            $user->markEmailaAsVerified();
+            $user->markEmailAsVerified();
         }
 
         return redirect()->to('/');
