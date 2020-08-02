@@ -14,24 +14,24 @@
 use App\ApiCode;
 
 return [
-  /*
+    /*
     |-----------------------------------------------------------------------------------------------------------
     | Code range settings
     |-----------------------------------------------------------------------------------------------------------
     */
-  'min_code'          => 100,
-  'max_code'          => 1024,
+    'min_code'          => 100,
+    'max_code'          => 1024,
 
-  /*
+    /*
     |-----------------------------------------------------------------------------------------------------------
     | Error code to message mapping
     |-----------------------------------------------------------------------------------------------------------
     |
     */
-  'map'               => [
-    ApiCode::INVALID_CREDENTIALS => 'api.invalid_credentials',
-    ApiCode::SOMETHING_WENT_WRONG => 'api.something_went_wrong',
-    ApiCode::VALIDATION_ERROR => 'api.validation_error'
-  ],
+    'map'               => [
+        ApiCode::INVALID_CREDENTIALS => 'api.invalid_credentials',
+        ApiCode::SOMETHING_WENT_WRONG => 'api.something_went_wrong',
+        ApiCode::VALIDATION_ERROR => 'api.validation_error'
+    ],
 
 ];

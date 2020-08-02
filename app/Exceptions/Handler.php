@@ -6,6 +6,7 @@ use App\ApiCode;
 use Illuminate\Foundation\Exceptions\Handler as ExceptionHandler;
 use Illuminate\Validation\ValidationException;
 use MarcinOrlowski\ResponseBuilder\ResponseBuilder as RB;
+use Symfony\Component\Routing\Exception\RouteNotFoundException;
 use Throwable;
 
 class Handler extends ExceptionHandler
@@ -55,6 +56,10 @@ class Handler extends ExceptionHandler
     {
         if ($exception instanceof ValidationException) {
             return $this->respondWithValidationError($exception);
+        }
+
+        if ($exception instanceof RouteNotFoundException) {
+            return abort(401);
         }
 
         return parent::render($request, $exception);
